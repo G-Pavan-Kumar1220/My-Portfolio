@@ -1,4 +1,3 @@
-
 import './App.css'
 import Header1 from './components/Header'
 import Home from './pages/Home'
@@ -10,20 +9,18 @@ import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 
 function App() {
-  
   return (
     <>
-        <Header1/>
-       
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/skills' element={<Skills/>}/>
-          <Route path='/projects' element={<Projects/>}/>
-        </Routes>
-      
-        <Footer/>
-  
+      <Header1 />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/projects' element={<Projects />} />
+      </Routes>
+
+      <Footer />
     </>
   )
 }
