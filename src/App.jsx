@@ -7,14 +7,21 @@ import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
 import Skills from './pages/Skills'
 import Projects from './pages/Projects'
+import { useState } from 'react'
 
 function App() {
+
+   const [home, sethome] = useState(true);
+
+   const homePageHandler =()=>{
+     sethome(false)
+   }
   return (
     <>
-      <Header1 />
-
+      <Header1 homePageHandler={homePageHandler} />
+      {home && <Home/>}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/projects' element={<Projects />} />
